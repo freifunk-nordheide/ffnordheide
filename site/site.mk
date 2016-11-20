@@ -1,5 +1,5 @@
 GLUON_SITE_PACKAGES := \
-	gluon-mesh-batman-adv-14 \
+	gluon-mesh-batman-adv-15 \
 	gluon-alfred \
 	gluon-respondd \
 	gluon-autoupdater \
@@ -8,7 +8,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-autoupdater \
 	gluon-config-mode-hostname \
 	gluon-config-mode-mesh-vpn \
-	gluon-config-mode-reboot-ffhh \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
 	gluon-luci-admin \
@@ -25,8 +24,8 @@ GLUON_SITE_PACKAGES := \
 	haveged
 
 
-DEFAULT_GLUON_RELEASE := 0.16.0~exp$(shell date '+%y%m%d%H%M')
-
+DEFAULT_GLUON_RELEASE := 2016.2.1
+#DEFAULT_GLUON_RELEASE := 0.16.6 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
@@ -37,7 +36,7 @@ export GLUON_BRANCH
 GLUON_TARGET ?= ar71xx-generic
 export GLUON_TARGET
 
-GLUON_LANGS ?= en de
+GLUON_LANGS ?= de en
 
 # support the USB stack
 USB_PACKAGES_BASIC := \
@@ -77,7 +76,7 @@ ifeq ($(GLUON_TARGET),x86-generic)
 endif
 
 ifeq ($(GLUON_TARGET),ar71xx-generic)
-	# GLUON_TLWR710_SITE_PACKAGES := $(USB_PACKAGES_BASIC) # there are also versions with just 4MB
+	GLUON_TLWR710_SITE_PACKAGES := $(USB_PACKAGES_BASIC)
 	GLUON_TLWR1043_SITE_PACKAGES := $(USB_PACKAGES)
 	GLUON_TLWR842_SITE_PACKAGES := $(USB_PACKAGES)
 	GLUON_TLWDR4300_SITE_PACKAGES := $(USB_PACKAGES)
