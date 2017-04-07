@@ -24,8 +24,7 @@ GLUON_SITE_PACKAGES := \
 	haveged
 
 
-DEFAULT_GLUON_RELEASE := 2016.2.1
-#DEFAULT_GLUON_RELEASE := 0.16.6 
+DEFAULT_GLUON_RELEASE := 2016.2.4
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
@@ -38,41 +37,95 @@ export GLUON_TARGET
 
 GLUON_LANGS ?= de en
 
-# support the USB stack
+# basic support the USB stack
 USB_PACKAGES_BASIC := \
 	kmod-usb-core \
 	kmod-usb2
-# FAT32 Support for USB
-USB_PACKAGES := $(USB_PACKAGES_BASIC) \
-    block-mount \
-    kmod-fs-ext4 \
-    kmod-fs-vfat \
-    kmod-usb-storage  \
-    kmod-usb-storage-extras  \
-    blkid  \
-    swap-utils  \
-    kmod-nls-cp1250  \
-    kmod-nls-cp1251  \
-    kmod-nls-cp437  \
-    kmod-nls-cp775  \
-    kmod-nls-cp850  \
-    kmod-nls-cp852  \
-    kmod-nls-cp866  \
-    kmod-nls-iso8859-1  \
-    kmod-nls-iso8859-13  \
-    kmod-nls-iso8859-15  \
-    kmod-nls-iso8859-2  \
-    kmod-nls-koi8r  \
-    kmod-nls-utf8
 
+# support for USB UMTS/3G devices
+USB_PACKAGES_3G := \
+	kmod-usb-serial \
+	kmod-usb-serial-wwan \
+	kmod-usb-serial-option \
+	chat \
+	ppp
+
+# support for USB GPS devices
+USB_PACKAGES_GPS := \
+	kmod-usb-acm \
+	ugps
+
+# support for HID devices (keyboard, mouse, ...)
+USB_PACKAGES_HID := \
+	kmod-usb-hid \
+	kmod-hid-generic
+
+# support for USB tethering
+USB_PACKAGES_TETHERING := \
+	kmod-usb-net \
+	kmod-usb-net-asix \
+	kmod-usb-net-dm9601-ether
+
+# storage support for USB
+USB_PACKAGES_STORAGE := \
+	block-mount \
+	kmod-fs-ext4 \
+	kmod-fs-vfat \
+	kmod-usb-storage \
+	kmod-usb-storage-extras \
+	blkid \
+	swap-utils \
+	kmod-nls-cp1250 \
+	kmod-nls-cp1251 \
+	kmod-nls-cp437 \
+	kmod-nls-cp775 \
+	kmod-nls-cp850 \
+	kmod-nls-cp852 \
+	kmod-nls-cp866 \
+	kmod-nls-iso8859-1 \
+	kmod-nls-iso8859-13 \
+	kmod-nls-iso8859-15 \
+	kmod-nls-iso8859-2 \
+	kmod-nls-koi8r \
+	kmod-nls-utf8
+
+USB_X86_GENERIC_NETWORK_MODULES := \
+	kmod-usb-ohci-pci \
+	kmod-sky2 \
+	kmod-atl2 \
+	kmod-igb \
+	kmod-3c59x \
+	kmod-e100 \
+	kmod-e1000 \
+	kmod-e1000e \
+	kmod-natsemi \
+	kmod-ne2k-pci \
+	kmod-pcnet32 \
+	kmod-8139too \
+	kmod-r8169 \
+	kmod-sis900 \
+	kmod-tg3 \
+	kmod-via-rhine \
+	kmod-via-velocity \
+	kmod-forcedeth
+
+# from ffki-packages:
+USB_PACKAGES_STORAGE += \
+	gluon-usb-media \
+	gluon-config-mode-usb-media
+
+# add addition network drivers and usb stuff only to targes where disk space does not matter
 ifeq ($(GLUON_TARGET),x86-generic)
 	# support the USB stack on x86 devices
 	# and add a few common USB NICs
-	GLUON_SITE_PACKAGES += $(USB_PACKAGES) \
-		kmod-usb-hid \
-		kmod-usb-net \
-		kmod-usb-net-asix \
-		kmod-usb-net-dm9601-ether
+	GLUON_SITE_PACKAGES += \
+		$(USB_PACKAGES_BASIC) \
+		$(USB_PACKAGES_STORAGE) \
+		$(USB_PACKAGES_HID) \
+		$(USB_PACKAGES_TETHERING) \
+		$(USB_PACKAGES_3G) \
+		$(USB_PACKAGES_GPS) \
+		$(USB_X86_GENERIC_NETWORK_MODULES)
 endif
 
 ifeq ($(GLUON_TARGET),ar71xx-generic)
