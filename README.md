@@ -1,2 +1,2 @@
 # ffnordheide
-Repo vom freifunk-nordheide.de
+Repo vom Freifunk-Nordheide e.V.
