@@ -1,5 +1,5 @@
 # ffnordheide
-Repo vom Freifunk-Nordheide e.V.
+Site configuration Freifunk-Nordheide e.V.
 
 # Firmware bauen
 
@@ -9,7 +9,7 @@ Repo vom Freifunk-Nordheide e.V.
     git clone https://github.com/freifunk-nordheide/ffnordheide
     cp -a ffnordheide/ffnh-site gluon/site
     cd gluon
-    git checkout v2016.2.5
+    git checkout v2017.1.1
     
     # for roamguide:
     git config http.sslVerify "false"
