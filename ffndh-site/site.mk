@@ -7,7 +7,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-core \
 	gluon-config-mode-autoupdater \
 	gluon-config-mode-contact-info \
-        gluon-config-mode-geo-location \
+	gluon-config-mode-hostname \
+	gluon-config-mode-geo-location \
 	gluon-config-mode-mesh-vpn \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
@@ -37,9 +38,8 @@ GLUON_SITE_PACKAGES += \
 
 # from ffki-packages:
 GLUON_SITE_PACKAGES += \
-	gluon-config-mode-ppa \
-	gluon-config-mode-hostname-no-pretty
-
+	gluon-config-mode-ppa
+	
 # Always call `make` from the command line with the desired release version!
 # otherwise this is generated:
 #	DEFAULT_GLUON_RELEASE := 2017.1.4~lede$(shell date '+%y%m%d%H%M')
@@ -57,7 +57,7 @@ GLUON_TARGET ?= ar71xx-generic
 export GLUON_TARGET
 
 GLUON_REGION ?= eu
-GLUON_ATH10K_MESH ?= 11s
+GLUON_WLAN_MESH ?= 11s
 
 GLUON_LANGS ?= en de
 

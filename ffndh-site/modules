@@ -5,19 +5,19 @@
 GLUON_SITE_FEEDS='ffki sargon eulenfunk ssidchanger'
 
 # the git repository from where to clone the package feed
-PACKAGES_FFKI_REPO=git://github.com/freifunk-kiel/ffki-packages.git
+PACKAGES_FFKI_REPO=https://github.com/freifunk-kiel/ffki-packages
 PACKAGES_EULENFUNK_REPO=https://github.com/Freifunk-Nord/eulenfunk-packages
 PACKAGES_SSIDCHANGER_REPO=https://github.com/Freifunk-Nord/gluon-ssid-changer
 PACKAGES_SARGON_REPO=https://github.com/sargon/gluon-sargon
 
-# the version/commit of the git repository to clone
-PACKAGES_FFKI_COMMIT=59df8ebf69ccf5ad2ed77c5b93d59f04a0e18e10
+# the git repository from where to clone the package feed
+PACKAGES_FFKI_COMMIT=43eaf88e833c4cbee1b3e8085b77f35cf05d2e5a
 PACKAGES_EULENFUNK_COMMIT=a4be61c88e4628d3f039510c86cd20fe7f417261
-PACKAGES_SSIDCHANGER_COMMIT=3d15977d25d07c039680f0ace4c98c8c5223a9e9
+PACKAGES_SSIDCHANGER_COMMIT=f5bf7285150c0825ce75938748706f53fe306496
 PACKAGES_SARGON_COMMIT=d98991c27d1d19d01a485c9f1a3082e8c844a3e4
 
 # the branch to check out
-PACKAGES_FFKI_BRANCH=lede
+PACKAGES_FFKI_BRANCH=2018.1.x
 PACKAGES_EULENFUNK_BRANCH=lede
-PACKAGES_SSIDCHANGER_BRANCH=2017.1.x
+PACKAGES_SSIDCHANGER_BRANCH=2018.1.x
 PACKAGES_SARGON_BRANCH=master
