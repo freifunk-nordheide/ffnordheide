@@ -1,22 +1,23 @@
 # This file allows specifying additional repositories to use
 # when building gluon.
 
-GLUON_SITE_FEEDS='ffki eulenfunk ssidchanger roamguide'
+# for each feed name given, add the corresponding PACKAGES_* lines
+GLUON_SITE_FEEDS='ffki sargon eulenfunk ssidchanger'
 
 # the git repository from where to clone the package feed
 PACKAGES_FFKI_REPO=git://github.com/freifunk-kiel/ffki-packages.git
 PACKAGES_EULENFUNK_REPO=https://github.com/Freifunk-Nord/eulenfunk-packages
-PACKAGES_SSIDCHANGER_REPO=https://github.com/freifunk-nord/gluon-ssid-changer.git
-PACKAGES_ROAMGUIDE_REPO=https://github.com/sargon/roamguide
+PACKAGES_SSIDCHANGER_REPO=https://github.com/Freifunk-Nord/gluon-ssid-changer
+PACKAGES_SARGON_REPO=https://github.com/sargon/gluon-sargon
 
 # the version/commit of the git repository to clone
 PACKAGES_FFKI_COMMIT=59df8ebf69ccf5ad2ed77c5b93d59f04a0e18e10
 PACKAGES_EULENFUNK_COMMIT=a4be61c88e4628d3f039510c86cd20fe7f417261
-PACKAGES_SSIDCHANGER_COMMIT=c6dc54f7d42f0871372df4dbbbe0dfffe7d56c51
-PACKAGES_ROAMGUIDE_COMMIT=491e2acb48e72ae4d0d22476efa51eb6c0c7970b
+PACKAGES_SSIDCHANGER_COMMIT=3d15977d25d07c039680f0ace4c98c8c5223a9e9
+PACKAGES_SARGON_COMMIT=d98991c27d1d19d01a485c9f1a3082e8c844a3e4
 
 # the branch to check out
 PACKAGES_FFKI_BRANCH=lede
 PACKAGES_EULENFUNK_BRANCH=lede
-PACKAGES_SSIDCHANGER_BRANCH=lede
-PACKAGES_ROAMGUIDE_BRANCH=lede
+PACKAGES_SSIDCHANGER_BRANCH=2017.1.x
+PACKAGES_SARGON_BRANCH=master
