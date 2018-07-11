@@ -2,7 +2,7 @@
 
 # validate_site.sh checks if the site.conf is valid json
 GLUON_BRANCH='v2018.1.x'
-GLUON_PACKAGES_BRANCH='v2018.1.x'
+GLUON_PACKAGES_BRANCH='master'
 
 P="$(pwd)/ffndh-site"
 echo "####### validating $P/site.conf ..."
