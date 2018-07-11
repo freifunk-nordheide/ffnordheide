@@ -1,5 +1,6 @@
 GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
+	gluon-status-page-mesh-batman-adv \
 	gluon-core \
 	gluon-respondd \
 	gluon-autoupdater \
@@ -43,7 +44,7 @@ GLUON_SITE_PACKAGES += \
 # Always call `make` from the command line with the desired release version!
 # otherwise this is generated:
 #	DEFAULT_GLUON_RELEASE := 2017.1.4~lede$(shell date '+%y%m%d%H%M')
-	DEFAULT_GLUON_RELEASE := 2017.1.4
+	DEFAULT_GLUON_RELEASE := 2018.1
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
