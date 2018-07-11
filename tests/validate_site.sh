@@ -4,9 +4,9 @@
 GLUON_BRANCH='v2017.1.x'
 GLUON_PACKAGES_BRANCH='v2017.1.x'
 
-P=$(pwd)
+P="$(pwd)/ffndh-site"
 echo "####### validating $P/site.conf ..."
-GLUON_SITEDIR="." lua5.1 tests/site_config.lua
+GLUON_SITEDIR="./ffndh-site/" lua5.1 tests/site_config.lua
 
 echo "####### validating $P/make-release.sh ..."
 bash -n $P/make-release.sh
