@@ -4,18 +4,22 @@
 # for each feed name given, add the corresponding PACKAGES_* lines
 GLUON_SITE_FEEDS='ffki sargon eulenfunk ssidchanger'
 
+# usb support and gluon-config-mode-ppa
 PACKAGES_FFKI_REPO=https://github.com/freifunk-kiel/ffki-packages
-PACKAGES_FFKI_COMMIT=43eaf88e833c4cbee1b3e8085b77f35cf05d2e5a
+PACKAGES_FFKI_COMMIT=f21206db8c8f6362eb40609ff92f1e6713236c4b
 PACKAGES_FFKI_BRANCH=2018.1.x
 
-PACKAGES_SARGON_COMMIT=d98991c27d1d19d01a485c9f1a3082e8c844a3e4
+# ddhcpd and roamguide
 PACKAGES_SARGON_REPO=https://github.com/sargon/gluon-sargon
-PACKAGES_SARGON_BRANCH=master
+PACKAGES_SARGON_COMMIT=4e84477564ffc67cb2cf690edc8dea37d6fe0cad
+PACKAGES_SARGON_BRANCH=v2018.x
 
-PACKAGES_EULENFUNK_COMMIT=a4be61c88e4628d3f039510c86cd20fe7f417261
+# gluon-quickfix
 PACKAGES_EULENFUNK_REPO=https://github.com/Freifunk-Nord/eulenfunk-packages
+PACKAGES_EULENFUNK_COMMIT=a4be61c88e4628d3f039510c86cd20fe7f417261
 PACKAGES_EULENFUNK_BRANCH=lede
 
+# gluon-ssid-changer
 PACKAGES_SSIDCHANGER_REPO=https://github.com/Freifunk-Nord/gluon-ssid-changer
-PACKAGES_SSIDCHANGER_COMMIT=f5bf7285150c0825ce75938748706f53fe306496
+PACKAGES_SSIDCHANGER_COMMIT=b65f0a943806c67017a7aae3baca4d6a7172123e
 PACKAGES_SSIDCHANGER_BRANCH=2018.1.x
