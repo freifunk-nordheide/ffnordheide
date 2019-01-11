@@ -15,7 +15,7 @@ Site configuration Freifunk-Nordheide e.V.
     git config http.sslVerify "false"
     
     make update
-    make GLUON_TARGET=ar71xx-generic V=s
+    make GLUON_TARGET=your_target_choice V=s
     
     # um schneller, mirt mehreren Kernen zu bauen, wenn alles klappt:
     X=$(expr $(nproc) + 1)
