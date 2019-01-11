@@ -5,11 +5,11 @@ Site configuration Freifunk-Nordheide e.V.
 
     cd /your/gluon/build/dir
     
-    git clone https://github.com/freifunk-gluon/gluon
+    git clone https://github.com/freifunk-gluon/gluon 
     git clone https://github.com/freifunk-nordheide/ffnordheide
     cp -a ffnordheide/ffnh-site gluon/site
     cd gluon
-    git checkout v2018.1
+    git checkout v2018.2
     
     # for roamguide:
     git config http.sslVerify "false"
